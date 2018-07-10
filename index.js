@@ -43,7 +43,7 @@ function viewCart() {
 }
     console.log(intro)
 }
- 
+
 function total() {
   // write your code here
 }
