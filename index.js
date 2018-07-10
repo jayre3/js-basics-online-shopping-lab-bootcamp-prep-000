@@ -56,15 +56,15 @@ function total() {
 function removeFromCart(item) {
   var pairs = Object.values(cart);
   for(var i = 0; i < cart.length; i++){
-  if(Object.keys(pairs[i])[0]===item){
-  cart.splice(i,1);
-  var deleted = 1;
-}
+   if(Object.keys(pairs[i])[0]===item){
+     cart.splice(i,1);
+     var deleted = 1;
+     }
 }
   if(deleted !== 1){
-  console.log('That item is not in your cart.')
+    console.log('That item is not in your cart.')
 }
-}
+
 
 function placeOrder(cardNumber) {
   if(cardNumber){
