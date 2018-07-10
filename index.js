@@ -49,7 +49,7 @@ function total() {
   var total = 0;
   for(var i = 0; i < cart.length; i++){
     total += Object.entries(cart[i])[0][1]
-};
+  };
   return total
 }
 
