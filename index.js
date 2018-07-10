@@ -38,15 +38,18 @@ function viewCart() {
 }
   else {
     intro +=
-    `, and ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}`;
+    `, and ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}.`;
 }
 }
     console.log(intro)
 }
 
 function total() {
-  // write your code here
-}
+  var total = 0;
+  for(var i = 0; i < cart.length; i++){
+    total += Object.entries(cart[i])[0][1]
+};
+  return total}
 
 function removeFromCart(item) {
   // write your code here
