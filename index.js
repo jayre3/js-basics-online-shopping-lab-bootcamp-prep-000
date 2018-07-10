@@ -49,7 +49,8 @@ function total() {
   for(var i = 0; i < cart.length; i++){
     total += Object.entries(cart[i])[0][1]
 };
-  return total}
+  return total
+}
 
 function removeFromCart(item) {
   // write your code here
