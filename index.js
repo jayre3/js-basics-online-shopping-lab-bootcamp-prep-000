@@ -20,29 +20,30 @@ function addToCart(item) {
 
 function viewCart() {}
   if (cart.length===0){
-  console.log('Your shopping cart is empty.')
+    console.log('Your shopping cart is empty.')
 }
   else if(cart.length===1){
-  var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]}.`
+    var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]}.`
 }
   else if(cart.length===2){
-  var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]} and ${Object.entries(cart[1])[0][0]} at $${Object.entries(cart[1])[0][1]}.`
+    var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]} and ${Object.entries(cart[1])[0][0]} at $${Object.entries(cart[1])[0][1]}.`
 }
   else{
-  var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]}, ${Object.entries(cart[1])[0][0]} at $${Object.entries(cart[1])[0][1]}`
+    var intro = `In your cart, you have ${Object.entries(cart[0])[0][0]} at $${Object.entries(cart[0])[0][1]}, ${Object.entries(cart[1])[0][0]} at $${Object.entries(cart[1])[0][1]}`
+  }
+    for(var i = 2; i < cart.length; i++){
+      if(cart[i+1]){
+        intro +=
+        `, ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}`;
 }
-  for(var i = 2; i < cart.length; i++){
-  if(cart[i+1]){
-    intro +=
-    `, ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}`;
-}
-  else {
-    intro +=
-    `, and ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}.`;
-}
+    else {
+        intro +=
+        `, and ${Object.entries(cart[i])[0][0]} at $${Object.entries(cart[i])[0][1]}.`;
+  }
 }
     console.log(intro)
 }
+
 
 function total() {
   var total = 0;
