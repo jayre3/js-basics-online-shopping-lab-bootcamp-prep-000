@@ -55,7 +55,7 @@ function total() {
 function removeFromCart(item) {
   var pairs = Object.values(cart);
   for(var i = 0; i < cart.length; i++){
-  if(Object.keys(pairsi])[0]===item){
+  if(Object.keys(pairs[i])[0]===item){
   cart.splice(i,1);
   var deleted = 1;
 }
@@ -66,5 +66,12 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if(cardNumber){
+  var cartTotal = total();
+  console.log(`Your total cost is $${cartTotal}, which will be charged to the card ${cardNumber}.`);
+  cart = [];
+}
+  else{
+  console.log("Sorry, we don't have a credit card on file for you.")
+}
 }
