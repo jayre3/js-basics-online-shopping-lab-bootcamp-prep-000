@@ -22,7 +22,8 @@ function viewCart() {
   if (cart.length===0){
    console.log('Your shopping cart is empty.')
 }
-
+  else if(cart.length===1){
+   var intro = `In your cart, you have ${Object.entries(cart[0])} at $${Object.entries(cart[1]}.`
 function total() {
   // write your code here
 }
