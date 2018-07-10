@@ -63,7 +63,7 @@ function removeFromCart(item) {
 }
   if(deleted !== 1){
     console.log('That item is not in your cart.')
-}
+}}
 
 
 function placeOrder(cardNumber) {
